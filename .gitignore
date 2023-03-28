@@ -475,3 +475,34 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+# arquivos e diretórios do Node.js
+node_modules/
+npm-debug.log
+
+# arquivos do Angular
+/dist/
+/*.js
+/*.js.map
+*.ngfactory.ts
+*.ngstyle.ts
+*.metadata.json
+*.stacktrace
+
+# arquivos do editor
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# arquivos de compilação e configuração
+/.sass-cache/
+/coverage/
+*.log
+*.sqlite
+*.pyc
+.env
+.env.*
+
+# arquivos de build de outras ferramentas
+.DS_Store
+Thumbs.db

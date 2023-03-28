@@ -1,0 +1,94 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Pagina Inicial</a></li>
+    <li class="breadcrumb-item"><a routerLink="/eventos">Lista de Eventos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Editar Evento</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-header">
+        Editar Evento
+      </div>
+      <div class="card-body">
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            <div class="form-label">
+              Tema do Evento
+            </div>
+            <input type="text" class="form-control">
+          </div>
+          <div class="col-sm-6">
+            <div class="form-label">
+              Local
+            </div>
+            <select id="estado" name="estado" class="form-control">
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            <div class="form-label">Quantidade de Pessoas</div>
+            <input type="number" class="form-control">
+          </div>
+          <div class="col-sm-6">
+            <div class="form-label">Lote</div>
+            <select class="form-control">
+              <option value="">1º Lote</option>
+              <option value="">2º Lote</option>
+              <option value="">3º Lote</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            <div class="form-label">
+              Data do Evento
+            </div>
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-sm-6">
+            <div class="form-label">
+              Imagem do Evento
+            </div>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+        <button class="btn btn-primary btn-sm">
+          Salvar informações
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
