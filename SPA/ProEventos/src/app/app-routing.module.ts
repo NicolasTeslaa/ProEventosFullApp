@@ -4,9 +4,11 @@ import { EventosListComponent } from './components/Eventos/eventos-list/eventos-
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' },
+  { path: '', component: DashboardComponent, pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'eventos', component: EventosListComponent },
   { path: 'eventoAdd', component: EventoAddComponent },
   { path: 'eventoEdit', component: EventoEditComponent },

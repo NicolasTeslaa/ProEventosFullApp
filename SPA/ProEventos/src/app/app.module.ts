@@ -8,13 +8,15 @@ import { EventosListComponent } from './components/Eventos/eventos-list/eventos-
 import { EventoAddComponent } from './components/Eventos/evento-add/evento-add.component';
 import { EventoEditComponent } from './components/Eventos/evento-edit/evento-edit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventosListComponent,
     EventoAddComponent,
-    EventoEditComponent
+    EventoEditComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
