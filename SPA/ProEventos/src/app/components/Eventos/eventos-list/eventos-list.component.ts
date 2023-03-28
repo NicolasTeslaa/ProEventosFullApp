@@ -9,21 +9,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./eventos-list.component.css']
 })
 export class EventosListComponent {
-  eventos: any
+  eventos: any = []
+  public eventosFiltrados: any = [];
+  private _filtroLista: string = '';
+
+  public get filtroLista(): string {
+    return this._filtroLista;
+  }
+  public set filtroLista(value: string) {
+    this._filtroLista = value;
+    //if ternario
+    this.eventosFiltrados = this.filtroLista ? this.filtrarEventos(this.filtroLista) : this.eventos;
+  }
+  filtrarEventos(filtrarPor: string): any {
+    //não importa se é maiuscula ou minuscula
+    filtrarPor = filtrarPor.toLocaleLowerCase();
+    return this.eventos.filter(
+      (evento: any) => evento.tema.toLocaleLowerCase().indexOf(filtrarPor) !== -1 ||
+        evento.local.toLocaleLowerCase().indexOf(filtrarPor) !== -1
+    )
+  }
   constructor(private eventosService: EventosService, private http: HttpClient) {
     this.reloadEventos()
   }
-  GetAllEventos2(): void {
-    this.http.get('https://localhost:5252/api/Evento').subscribe(
-      response => this.eventos = response,
-      error => console.log(error)
-    )
 
-  }
 
-  reloadEventos(){
-    this.eventosService.GetAllEventos().subscribe((resultado)=>{
+  reloadEventos() {
+    this.eventosService.GetAllEventos().subscribe((resultado) => {
       this.eventos = resultado;
+      this.eventosFiltrados = this.eventos
     })
   }
 }

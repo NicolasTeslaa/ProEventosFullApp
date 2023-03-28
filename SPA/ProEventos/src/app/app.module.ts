@@ -9,6 +9,7 @@ import { EventoAddComponent } from './components/Eventos/evento-add/evento-add.c
 import { EventoEditComponent } from './components/Eventos/evento-edit/evento-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [EventosService],
   bootstrap: [AppComponent]
