@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProEventos.API.Data;
-using ProEventos.API.Models;
+using ProEventos.Domain;
 
 namespace ProEventos.API.Controllers;
 
@@ -26,7 +26,7 @@ public class EventoController : ControllerBase
     [HttpGet("{id}")]
     public Evento GetById(int id)
     {
-        return _context.Eventos.FirstOrDefault(evento => evento.EventoId == id);
+        return _context.Eventos.FirstOrDefault(evento => evento.Id == id);
     }
 
     [HttpPost]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
