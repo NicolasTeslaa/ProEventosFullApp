@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProEventos.API.Data;
+using ProEventos.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
 });
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<DataContext>(
+builder.Services.AddDbContext<ProEventosContext>(
     options => options.UseSqlite(connectionString));
 
 var app = builder.Build();
