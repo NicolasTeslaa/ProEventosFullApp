@@ -1,9 +1,16 @@
+using Microsoft.EntityFrameworkCore;
 using ProEventos.Domain;
+using ProEventos.Persistence.Repositories;
 
 namespace ProEventos.Persistence.Persistence
 {
-    public class PalestrantePersist
+    public class PalestrantePersist : IPalestrateRepository
     {
+          private readonly ProEventosContext context;
+        public PalestrantePersist(ProEventosContext _context)
+        {
+            _context = context;
+        }
         public async Task<Palestrante[]> GetAllPalestrantesAsync(bool includeEventos = false)
         {
             IQueryable<Palestrante> query = context.Palestrante
