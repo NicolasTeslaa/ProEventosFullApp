@@ -1,4 +1,5 @@
-using ProEventos.Persistence.Repositories;
+using ProEventos.Persistence.Contextos;
+using ProEventos.Persistence.Contratos;
 
 namespace ProEventos.Persistence
 {

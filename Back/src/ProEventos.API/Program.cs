@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProEventos.Persistence;
+using ProEventos.Persistence.Contextos;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.

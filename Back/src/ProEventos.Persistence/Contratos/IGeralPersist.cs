@@ -1,6 +1,6 @@
 using ProEventos.Domain;
 
-namespace ProEventos.Persistence.Repositories
+namespace ProEventos.Persistence.Contratos
 {
     public interface IGeralPersist
     {
