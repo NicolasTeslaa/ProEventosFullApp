@@ -3,9 +3,9 @@ using ProEventos.Domain;
 using ProEventos.Persistence.Contextos;
 using ProEventos.Persistence.Contratos;
 
-namespace ProEventos.Persistence.Persistence
+namespace ProEventos.Persistence
 {
-    public class PalestrantePersist : IPalestratePersist
+    public class PalestrantePersist : IPalestrantePersist
     {
         private readonly ProEventosContext context;
         public PalestrantePersist(ProEventosContext _context)

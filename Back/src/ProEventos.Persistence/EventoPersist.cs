@@ -3,7 +3,7 @@ using ProEventos.Domain;
 using ProEventos.Persistence.Contextos;
 using ProEventos.Persistence.Contratos;
 
-namespace ProEventos.Persistence.Persistence
+namespace ProEventos.Persistence
 {
     public class EventoPersist : IEventoPersist
     {
