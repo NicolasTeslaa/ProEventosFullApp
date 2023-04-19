@@ -16,12 +16,12 @@ public class EventoController : ControllerBase
     }
     private readonly ProEventosContext context;
     [HttpGet("GetAll")]
-    public async Task<IActionResult> Get()
+    public async Task<IActionResult> GetAllEventos()
     {
         try
         {
             var eventos = await _eventoService.GetAllEventosAsync(true);
-            if (eventos == null) return NotFound("Nenhum evento encontrado");
+            if (eventos == null) return NoContent();
 
             return Ok(eventos);
         }
@@ -48,7 +48,7 @@ public class EventoController : ControllerBase
         }
     }
 
-    [HttpGet("/GetAllByTema{tema}")]
+    [HttpGet("/GetAllByTema/{tema}")]
     public async Task<IActionResult> GetByTema(string tema)
     {
         try
